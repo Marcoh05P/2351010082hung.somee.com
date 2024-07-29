@@ -1,0 +1,41 @@
+body {
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: arial, verdana, sans-serif;
+}
+
+p {
+    padding: 10px;
+}
+
+p[id] {
+    border: 1px solid #000000;
+}
+
+p[id="summary"] {
+    background-color: #ffff00;
+}
+
+p[class~="XHTML"] {
+    border: 5px solid #000000;
+}
+
+p[language|="en"] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+p[class^="b"] {
+    border: 3px solid #333333;
+    color: #ff00ff;
+}
+
+p[class$="x"] {
+    border: 1px solid #333333;
+    color: #ff0000;
+}
+
+p[class*="in"] {
+    background-color: #00ffff;
+}

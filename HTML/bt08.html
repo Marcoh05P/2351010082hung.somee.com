@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 08</title>
+  </head>
+  <body>
+    <table align="center">
+      <tr>
+        <td colspan="2" align="center">
+          <h3>CHƯƠNG TRÌNH NGHE NHẠC</h3>
+          <audio controls loop>
+            <source src="../Images/music.mp3" type="audio/mpeg" />
+          </audio>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <h3>CHƯƠNG TRÌNH XEM VIDEO</h3>
+          <video autoplay muted height="230px" width="230px">
+            <source src="../Images/animal.mp4" />
+          </video>
+        </td>
+        <td>
+          <h3>XEM VIDEO TRÊN YOUTUBE</h3>
+          <iframe
+            width="320px"
+            height="230px"
+            src="https://www.youtube.com/embed/qIpN9BMSRcw?si=ttBSGKR12jayibiW"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

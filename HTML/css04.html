@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 04</title>
+
+    <style>
+      table {
+        border: 1px solid black;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 500px;
+      }
+      table caption {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+      table tr:nth-child(odd) {
+        background-color: rgb(203, 202, 202);
+      }
+      table tr:nth-child(even) {
+        background-color: rgb(230, 230, 230);
+      }
+      table tr:first-child {
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        color: white;
+        background-color: rgb(175, 175, 175);
+      }
+    </style>
+  </head>
+  <body>
+    <table align="center">
+      <caption>
+        Món ngon: Thịt kho sả
+      </caption>
+      <tr>
+        <td>Nguyên liệu</td>
+        <td>Số lượng</td>
+      </tr>
+      <tr>
+        <td>Thịt nạc băm</td>
+        <td>200g</td>
+      </tr>
+      <tr>
+        <td>Củ sả</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Ớt hiểm</td>
+        <td>1 trái</td>
+      </tr>
+      <tr>
+        <td>Gia vị: muối, nước mắm, đường, hạt nêm</td>
+        <td>200g</td>
+      </tr>
+    </table>
+  </body>
+</html>

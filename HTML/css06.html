@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 06</title>
+
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      .banner {
+        text-align: center;
+        font-size: 3em;
+        color: blue;
+        font-weight: bold;
+        text-shadow: 3px 3px 1px #aaa;
+      }
+
+      .menu {
+        display: flex;
+        background-color: deepskyblue;
+        height: 50px;
+        width: 100%;
+      }
+      .item {
+        color: white;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .item:hover {
+        font-size: larger;
+        color: yellow;
+        cursor: pointer;
+      }
+
+      .content {
+        color: black;
+      }
+
+      div.content > h2 {
+        color: grey;
+      }
+
+      img {
+        height: 200px;
+        width: 250px;
+        position: static;
+        float: right;
+      }
+
+      .btn {
+        background-color: rgb(0, 191, 255);
+        font-size: large;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        width: auto;
+        height: 40px;
+        border-radius: 5px;
+        border: white;
+      }
+
+      .btn:hover {
+        background-color: rgb(160, 231, 255);
+        font-size: larger;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+        width: auto;
+        height: 40px;
+        border-radius: 5px;
+        border: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">Example Cafe</div>
+
+    <hr />
+
+    <div class="menu">
+      <div class="item">TRANG CHỦ</div>
+      <div class="item">THỰC ĐƠN</div>
+      <div class="item">KHUYẾN MÃI</div>
+      <div class="item">LIÊN HỆ</div>
+    </div>
+
+    <div class="content">
+      <img src="../Images/coffee.png" />
+      <h2>Example Cafe phục vụ thức ăn hữu cơ có nguồn gốc tại địa phương</h2>
+      <p>
+        Với tầm nhìn tuyệt đẹp ra quang cảnh đại dương, Example Cafe mang đến
+        môi trường hoàn hảo để thư giãn
+      </p>
+      <p>
+        Thực đơn của chúng tôi cung cấp thức ăn dùng cho bữa sáng, trưa và tối,
+        kể cả thức ăn chay.
+      </p>
+      <p>
+        Đến với Example Cafe, bạn có thể nhâm nhi một ly cà phê nóng, hay một ly
+        sinh tố tố làm mát, bạn không bao giờ phải cảm thấy vội vã và có thể thư
+        giãn với bạn bè hoặc ngắm cảnh đại dương.
+      </p>
+      <h2>Khuyến mãi đặc biệt cuối tuần</h2>
+      <p>
+        Cuối tuần này, chúng tôi tiếp tục phục vụ các món ăn và thức uống đặc
+        biệt theo phong cách Anh sang trọng với các món làm hoàn toàn bằng
+        trứng, kem và bơ.
+      </p>
+      <p>Khác hàng dùng một lý cà phê sẽ được tặng một bánh sandwich.</p>
+    </div>
+
+    <button class="btn">Đăng ký thành viên</button>
+  </body>
+</html>
