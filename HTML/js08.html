@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 08</title>
+
+  <script>
+    function Statistic(){
+      var s = document.getElementById("input").value;
+      var arr = s.split(" ");
+      var arrKq = [];
+      var i, words = 0;
+      for(i = 0; i < 128; i++)
+        arrKq[i] = 0;
+
+      for(i=0; i < arr.length; i++)
+        if(arr[i].trim() != "")
+        words++;
+
+      var kq = "Characters: " + s.length + "<br>" + "Words: " + words +"<br>";
+
+      for(i = 0; i < s.length; i++){
+        if(s[i] >= 'a' && s[i] <= 'z')
+          arrKq[s.charCodeAt(i) - 32] += 1;
+        else
+          arrKq[s.charCodeAt(i)]+= 1;
+      }
+
+      for(i = 0; i < arrKq.length; i++)
+        if(arrKq[i]>0){
+          kq += "Character ' " + String.fromCharCode(i) + " ': " + arrKq[i] + "<br>";
+        }
+       
+      document.getElementById("ketqua").innerHTML = kq;
+    }
+  </script>
+
+</head>
+<body>
+  <table>
+    <caption><h2>String Statistic</h2></caption>
+    <tr>
+      <td>String:</td>
+      <td><input type = "text" id ="input" size = 50 value="Hello, how are you?  1123425 "></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button onclick="Statistic()">Statistic</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><span id="ketqua"></span></td>
+    </tr>
+  </table>
+</body>
+</html>

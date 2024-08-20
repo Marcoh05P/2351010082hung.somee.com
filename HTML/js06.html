@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 06</title>
+
+  <script>
+    function dangky(){
+      var tendn = document.forms.myForm["user"].value;
+      var mk = document.forms.myForm["pass"].value;
+      var ns = document.forms.myForm["birthday"].value;
+      var n = new Date(ns);
+      var now = new Date();
+      var tuoi=now.getFullYear() - n.getFullYear();
+      var gt=document.forms.myForm["gender"].value;
+      var qt=document.forms.myForm["qt"].value;
+
+      document.forms.myForm["result"].value = "Chào mừng "+ tendn + "\nBạn là " + gt + "\nMật khẩu của bạn có " + mk.length + " ký tự\nTuổi của bạn là " + tuoi + "\nVấn đề bạn quan tâm là " + qt;
+
+
+      return false;
+    }
+  </script>
+
+</head>
+<body>
+  <form id = "myForm" onsubmit="return dangky()">
+    <table border = "1px">
+      <caption>ĐĂNG KÝ THÀNH VIÊN</caption>
+      <tr>
+        <td>Tên đăng nhập</td>
+        <td><input type="text" name = "user" required></td>
+      </tr>
+      <tr>
+        <td>Mật khẩu</td>
+        <td><input type="password" name = "pass" required></td>
+      </tr>
+      <tr>
+        <td>Ngày sinh</td>
+        <td><input type="date" name = "birthday" required></td>
+      </tr>
+      <tr>
+        <td>Giới tính</td>
+        <td><input type="radio" name = "gender" value ="Nam" checked>Nam
+          <input type="radio" name = "gender" value="Nữ">Nữ
+        </td>
+      </tr>
+      <tr>
+        <td>Vấn đề bạn quan tâm</td>
+        <td>
+          <select name = "qt">
+            <option value = "Kinh tế">Kinh tế</option>
+            <option value = "Thể thao">Thể thao</option>
+            <option value = "Văn học nghệ thuật">Văn học nghệ thuật</option>
+          </select>
+      </td>
+      </tr>
+
+      <tr>
+        <td><button type = "submit">Đăng ký</button></td>
+        <td><button type = "reset">Hủy</button></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><textarea name = "result" rows="6" cols="50"></textarea></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

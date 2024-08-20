@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<h>, initial-scale=1.0">
+  <title>JS 01</title>
+<script>
+  function tinhTuoi(){
+    var ten = document.getElementById("txtName").value;
+    var namSinh = parseInt(document.getElementById("txtYear").value);
+    var date = new Date();
+
+    if(ten == "")
+    {
+      alert("Tên chưa nhập!");
+      return;
+    }
+    if(isNaN(namSinh))
+    {
+      alert("Năm sinh không hợp lệ!");
+      return;
+    }
+
+    document.getElementById("result").innerHTML = "<br>Chào bạn " + ten + "!<br>Tuổi của bạn là: " + (date.getFullYear() - namSinh);
+  }
+</script>
+
+</head>
+<body>
+  <h1>CHƯƠNG TRÌNH TÍNH TUỔI</h1>
+  <table border = "1">
+    <tr>
+      <td>Nhập vào tên của bạn: </td>
+      <td><input type = "text" id = "txtName"></td>
+    </tr>
+
+    <tr>
+      <td>Nhập vào năm sinh: </td>
+      <td><input type = "text" id ="txtYear"></td>
+    </tr>
+  </table>
+
+  <button onclick="tinhTuoi()">Tính tuổi</button>
+
+  <span id = "result"></span>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 06</title>
+  <style>
+    table, td{
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 15px;
+    };
+    table{
+      margin: 0px auto;
+    };
+    caption{
+      font-size: 2em;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var html = "<table><caption>BẢNG CỬU CHƯƠNG</caption>";
+    var count = 2, row , col, i;
+    for(row = 1; row <= 2; row++){
+      html += "<tr>"
+        for(col = 1; col <=4; col++){
+          html+="<td>";
+          for(i = 1; i <=10; i++){
+            html+= count +" x "+ i + " = " + count*i + "<br>"; 
+          }
+          html+="</td>";
+          count++;
+        }
+      html+="</tr>";
+    }
+    html+="</table>";
+    document.write(html);
+  </script>
+</body>
+</html>

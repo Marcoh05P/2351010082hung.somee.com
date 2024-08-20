@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 02</title>
+  <script src="../JS/js02.js"></script>
+</head>
+<body>
+  <h3 id = "days"></h3>
+  <h3 id = "date"></h3>
+  <h3 id = "time"></h3>
+  <button onclick="showDate()">Xem ngày giờ</button>
+  <script>
+    var month = Number(prompt("Nhập tháng"));
+    var year = Number(prompt("Nhập năm: ", 2000));
+    var days = calculateDay(month, year);
+    document.getElementById("days").innerHTML = "Tháng " + month + " năm " + year + " có " + days + " ngày!";
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 09</title>
+  <script>
+    function taoMang(){
+      var size = parseInt(document.getElementById("sopt").value);
+      var i = 0;
+      arr = new Array(size);
+
+      for(i = 0; i < size; i++){
+        arr[i] = Math.floor(Math.random() * 100)%50;
+        console.log(arr[i]);
+      }
+
+      document.getElementById("txtArr0").value = arr.join(" ");
+    }
+
+    function tang(a, b){
+      return a - b;
+    }
+    function giam(a, b){
+      return b - a;
+    }
+    function mangTang(){
+      arr.sort(tang);
+      document.getElementById("txtArr1").value = arr.join(" ");
+    }
+    function mangGiam(){
+      arr.sort(giam);
+      document.getElementById("txtArr2").value = arr.join(" ");
+    }
+
+  </script>
+</head>
+<body>
+  <label for="'sopt">Nhập số phần tử</label>
+  <input type="number" id ="sopt" value = 10 size = 10>
+  <br>
+  <button onclick="taoMang()">Tạo mảng</button>
+  <button onclick="mangTang()">Sắp xếp mảng tăng</button>
+  <button onclick="mangGiam()">Sắp xếp mảng giảm</button>
+  <br>
+  <label for="txtArr0">Mảng ban đầu</label>
+  <input type="text" id="txtArr0" readonly size = 50>
+  <br>
+  <label for="txtArr1">Mảng tăng dần</label>
+  <input type="text" id="txtArr1" readonly size = 50>
+  <br>
+  <label for="txtArr2">Mảng giảm dần</label>
+  <input type="text" id="txtArr2" readonly size = 50>
+</body>
+</html>

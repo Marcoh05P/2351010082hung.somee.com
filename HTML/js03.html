@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 03</title>
+
+  <script>
+    function PTB2(){
+      var a = parseInt(document.getElementById("a").value);
+      var b = parseInt(document.getElementById("b").value);
+      var c = parseInt(document.getElementById("c").value);
+      var ketqua, x;
+
+      if(a==0){
+        if(b==0){
+          if(c==0)
+            ketqua = "Phương trình vô số nghiệm!";
+          else
+            ketqua = "Phương trình vô nghiệm!";
+        }
+        else{
+          x = -c / b;
+          kq= "x = " +  x.toFixed(2);
+        }
+      }
+      else{
+        var delta = b * b - 4 * a * c;
+        if(delta < 0){
+          kq = "Phương trình vô nghiệm";
+        }
+        else if (delta == 0){
+          x = -b / (2*a);
+          kq = "Phương trình có nghiệm kép <br>x = " + x;
+        }
+        else{
+          var x1 = (-b+Math.sqrt(delta))/(2*a);
+          var x2 = (-b-Math.sqrt(delta))/(2*a);
+          kq= "Phương trình có 2 nghiệm phân biệt <br> x = " + x1.toFixed(2) + "<br>x = " + x2.toFixed(2);
+        }
+      }
+      document.getElementById("result").innerHTML=kq;
+    }
+
+    function xoa(){
+      document.getElementById("a").value ="";
+      document.getElementById("b").value ="";
+      document.getElementById("c").value ="";
+      document.getElementById("result").innerHTML ="";
+    }
+  </script>
+
+</head>
+<body>
+  <h3 align="center">CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH BẬC 2</h3>
+  <h4 align = "center">ax<sup>2</sup> + bx + c = 0</h4>
+  <table border = "1" align="center" width = "50%">
+    <tr>
+      <td>a = </td>
+      <td><input type = text id = "a"></td>
+    </tr>
+    <tr>
+      <td>b = </td>
+      <td><input type = text id = "b"></td>
+    </tr>
+    <tr>
+      <td>c = </td>
+      <td><input type = text id = "c"></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <button onclick = "PTB2()">Giải</button>
+        <button onclick = "xoa()">Xóa</button></td>
+    </tr>
+    <tr>
+      <td colspan="2" id = "result"></td>
+    </tr>
+  </table>
+</body>
+</html>

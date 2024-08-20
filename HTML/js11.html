@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 11</title>
+  <style>
+    img{
+      scale: 100%;
+    }
+  </style>
+  <script>
+    function change(scale){
+      document.getElementById("image").style.scale=scale +"%";
+    }
+  </script>
+</head>
+<body>
+  <h2>Image Resizing</h2>
+  <hr>
+  <label for="scale">Scale:</label>
+  <input type="radio" name = "scale" onclick="change(10)">10%
+  <input type="radio" name = "scale"  onclick="change(25)">25%
+  <input type="radio" name = "scale" onclick="change(50)">50%
+  <input type="radio" name = "scale" checked onclick="change(100)">100%
+  <br>
+  <img id = "image" src="../Images/6.jpg">
+</body> 
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 13</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#canvas").off("mouseover","div").off("mousemove", "div");
+    })
+  </script>
+
+  <style>
+    #canvas{
+      border: 1px solid red;
+      width: 100%;
+      max-width: 600px;;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    <label for="txtData">Nhập các giá trị: </label>
+    <input type="text" id="txtData" required value="20,50,70,80,40,30"> 
+    <button onclick="drawChart()">Draw Chart</button>
+  </p>
+  <canvas id="canvas"></canvas>
+  <script>
+    function drawChart(){
+      var xValues = document.getElementById("txtData").value.split(",");
+      var yValues = [];
+      var barColors = [];
+      for( i = 0; i < xValues.length;i++){
+        yValues.push(Number(xValues[i]));
+
+        barColors[i] = "rgb("+Math.floor(Math.random()*1000)%256+","+Math.floor(Math.random()*300)%256+","+Math.floor(Math.random()*300)%256+")";
+      }
+
+      new Chart("canvas",
+      {
+        type: "pie",
+        data:{
+          labels: xValues,
+          datasets:[{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options:{
+          title:{
+            display: true,
+            text: "Pie Chart using Chart.js"
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

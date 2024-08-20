@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>JS 04</title>
+  <script>
+    function cal(){
+    var so1 = Number(document.forms["myForm"]["num1"].value);
+    var so2 = Number(document.forms["myForm"]["num2"].value);
+    var dau = document.forms["myForm"]["pheptinh"].value;
+    var ketqua;
+
+    switch (dau){
+      case "+":
+        ketqua = so1+so2;
+        break;
+      case "-":
+        ketqua = so1-so2;
+        break;
+      case "*":
+        ketqua = so1*so2;
+        break;
+      case "/":
+        if(so2!=0)
+          ketqua = (so1/so2).toFixed(2);
+        else
+        ketqua = "Lỗi phép tính!";
+        break;
+    }
+    
+    document.forms["myForm"]["result"].value = ketqua;
+    return false;
+    }
+  </script>
+</head>
+<body>
+  <form id = "myForm" onsubmit="return cal()">
+    <table border  = "1px" align = "center">
+      <tr>
+        <td colspan="2"><h2>CÁC PHÉP TÍNH SỐ HỌC</h2></td>
+      </tr>
+      <tr>
+        <td>Số thứ 1</td>
+        <td><input type = "text" name = "num1"></td>
+      </tr>
+      <tr>
+        <td>Số thứ 2</td>
+        <td><input type = "text" name = "num2"></td>
+      </tr>
+
+      <tr>
+        <td>Chọn phép tính</td>
+        <td>
+          <input type = "radio" name = "pheptinh" value ="+">Cộng
+          <br><input type = "radio" name = "pheptinh" value ="-">Trừ
+          <br><input type = "radio" name = "pheptinh" value ="*">Nhân
+          <br><input type = "radio" name = "pheptinh" value ="/">Chia
+        </td>
+      </tr>
+      <tr>
+        <td><button type = "submit">Thực hiện</button></td>
+        <td><input type = "text" name = "result" readonly></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

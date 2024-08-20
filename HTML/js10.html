@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 10</title>
+  <style>
+    #banner{
+      height: 100px;
+      width: 100%;
+      font-size: 3em;
+      background-color: red;
+      color: yellow;
+      line-height: 100px;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    function change(){
+      document.getElementById("banner").innerHTML = document.getElementById("content").value;
+      document.getElementById("banner").style.backgroundColor = document.getElementById("colorbg").value;
+      document.getElementById("banner").style.color = document.getElementById("colortext").value;
+    }
+  </script>
+</head>
+<body>
+  <div id = "banner">WELCOME HTML5!
+  </div>
+  <br>
+  <label for="content">Nhập nội dung:</label>
+  <input type="text" id ="content" size = 30 value ="WELCOME HTML5!">
+  <br>
+  <label for="colorbg">Màu nền:</label>
+  <input type = "color" id="colorbg" value = #ff0000>
+  <br> 
+  <label for="colortext">Màu chữ:</label>
+  <input type = "color" id="colortext" value = #ffff00>
+  <br>
+  <button onclick="change()">Thực hiện</button>
+</body>
+</html>
