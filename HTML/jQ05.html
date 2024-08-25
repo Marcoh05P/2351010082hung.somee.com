@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('img')
+      .mouseover(function(){
+        $(this).attr("src", "/Images/dog.jpg")
+        .animate({
+          height: "+=200px",
+          width: "+=200px"
+        })
+      })
+      .mouseout(function(){
+        $(this).attr("src", "/Images/ga.jpg")
+        .animate({
+          height: "-=200px",
+          width: "-=200px"
+        })
+      });
+    });
+  </script>
+
+
+  <style>
+    img{
+      height: 150px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <img src = "../Images/ga.jpg">
+</body>
+</html>

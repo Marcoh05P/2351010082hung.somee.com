@@ -25,7 +25,22 @@
       font-size: 1.5em;
       font-weight: bold;
     }
+
+    .newBgr{
+      background-color: fuchsia;
+    }
   </style>
+
+  <script>
+    $(document).ready(function(){
+      $("#change").click(function(){
+        $("tr:odd").addClass("newBgr");
+      })
+      $("#rechange").click(function(){
+        $("tr:odd").removeClass("newBgr");
+      })
+    })
+  </script>
 </head>
 <body>
   <table>
