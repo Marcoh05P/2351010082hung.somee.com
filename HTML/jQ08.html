@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/jQ08.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../JS/jQ08.js"></script>
+</head>
+<body>
+  <div id ="container">
+    <div id="left">
+      <fieldset>
+        <legend>Chọn</legend>
+        <p>
+          <input type="radio" name ="shadow" id="no" checked>Chữ bình thường
+          <br>
+          <input type="radio" name ="shadow" id="yes">Chữ có bóng
+        </p>
+        <p>Chọn màu chữ:
+          <input type="color" id="textcolor" value="#0000ff" >
+        </p>
+        <p>
+          <button id="btDel">Xóa phần tử cuối</button>
+          <button id="btUndo">Phục hồi</button>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Click vào chuỗi</legend>
+        <ol id ="list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JQUERY</li>
+          <li>JAVASCRIPT</li>
+        </ol>
+      </fieldset>
+    </div>
+    <div id="right">
+      <p id="view">HTML</p>
+    </div>
+  </div>
+</body>
+</html>
